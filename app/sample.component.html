@@ -1,0 +1,15 @@
+<div class="container" *ngIf="showHeader">
+	             <h1>this is my sample page</h1>
+                  <br>
+                  He is  {{name | uppercase}}
+                  <img bind-src="imageUrl"/><br><br>
+                  <input type="text" (keydown.enter)="getValues($event)" /><br>
+                  <button class="btn btn-primary" (click)="runMe()">Click Me!!!</button>
+                  <br><br>
+                  <input type="text" [(ngModel)]="realName" (keyup.enter)="getValues($event)" />{{realName}}
+                  <br> 
+                  <ul *ngFor="let item of items">
+                  <li>{{item}}</li>
+                  </ul>
+                  <br>Display Beer Price is   {{price | currency:'USD':'true'}}
+                  </div>
